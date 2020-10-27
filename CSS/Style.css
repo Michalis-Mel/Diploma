@@ -1,0 +1,428 @@
+html{
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+}
+
+body{
+    font-family:sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    min-height: 100%;
+    background-color: darkgrey;
+}
+
+/*Global*/
+.container{
+    width: 80%;
+    margin: auto;
+    overflow: hidden;    
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.button_1{
+    height:37px;
+    background: #e8491d;
+    border:0;
+    padding-left: 6px;
+    color: #ffffff;
+}
+
+.button_2{
+    height:30px;
+    width: 150px;
+    background: #e8491d;
+    border:0;
+    padding-left: auto;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-left: 30%;
+}
+
+.dark{
+    padding: 15px;
+    background: #35424a;
+    color: #ffffff;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/*Header*/
+header{
+    background: #35424a;
+    color: #ffffff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #e8491d 3px solid;    
+}
+
+header a/*(to menu ploigisis)*/{
+    color: #ffffff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li{
+    float: left;
+    display:block;;
+    padding: 0 20px 0 20px;
+}
+
+header #branding{
+    float: left;
+}
+
+header #branding h1{
+    margin: 0;
+}
+
+header nav{
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight, header .current a{
+    color: #e8491d;
+    font-weight: bold;
+}
+
+header a: hover{
+    color: #cccccc;
+    font-weight: bold;
+}
+
+/*Showcase*/
+
+#showcase{
+    background: url('../images/laptop.jpg') no-repeat;
+    height: 600px;
+    background-position:center;
+    background-size:auto;
+    text-align: center;
+    color: black;
+}
+
+#showcase h1{
+    margin-top: 200px;
+    font-size: 60px;
+    margin-bottom: 50px;
+}
+
+#showcase p{
+    font-size: 30px;
+}
+
+/*Newsletter*/
+
+#newsletter{
+    padding: 15px;
+    color: #ffffff;
+    background: #35424a;
+}
+
+#newsletter h1{
+    float: left;
+}
+
+#newsletter form{
+    float:right;
+    margin-top: 15px;
+}
+
+#newsletter input[type="email"]{
+    padding: 4px;
+    height: 25px;
+    width: 250px;
+}
+
+#fastcreator {
+    color: black;
+    margin-top: 100px;
+    text-decoration: none;
+    font-size: 25px;
+    text-align: center;
+}
+
+#fastcreator:hover{
+    color: #e8491d;
+    font-weight: bold;
+}
+
+#fastcreator:active{
+    color:skyblue;
+}
+
+#fastcreator:visited{
+    color: grey;
+}
+
+/*Boxes*/
+
+#latex_pic{
+    width: 4000px;
+    margin-top: 61px;
+}
+
+#latex_h3{
+    margin-top: 48px;
+}
+
+#boxes{
+    margin-top: 80px;
+    margin-left: 60px;
+}
+
+#boxes .box{
+    float: left;
+    text-align: center;
+    width: 14%;
+    padding: 15px;
+}
+
+#boxes .box img{
+    width: 160px;
+}
+
+/*Sidebar*/
+aside#sidebar{
+    float: right;
+    width: 30%;
+    margin-top: 100px;
+}
+
+aside#sidebar .message input, aside#sidebar .message textarea{
+    width: 90%;
+    padding: 5px;
+}
+
+/*Main-col*/
+
+article#main-col{
+    float: left;
+    width: 60%;
+}
+
+#contact_h3{
+    margin-left: 35%;
+}
+
+#university{
+    width: 250px;
+    height: 200px;
+    margin-top: 40px;
+    margin-left: 300px;
+    margin-bottom: 30px;
+}
+
+/*Template Creator*/
+
+.dlists{
+  font-family: cursive;
+  border: 0px;
+  text-align: left;
+  font-size: 14px;
+  padding: 10px 8px 10px 14px;
+  background-color:transparent;
+  width: 155px;    
+  height: 17px;
+  margin-left: 9%;
+}
+
+.row {
+margin: 20px 10% 20px 8%;
+}
+.column {
+  float: left;
+  width: 16.3%;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border-color: black !important;
+  background: #e8491d;
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 3em;
+  line-height: 3;
+  background: #2c3e50;
+  overflow: hidden;
+  border-radius: .25em;
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #fff;
+  cursor: pointer;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #34495e;
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #f39c12;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+aside#final_sidebar{
+    float: right;
+    width: 35%;
+    margin-top: 180px;
+}
+
+
+#convert{
+    margin-top: 25px;
+    margin-left: 10%;
+    margin-bottom: 119px;
+    border-color: 1px #e8491d;
+    background-color: antiquewhite;
+    resize:none;
+}
+
+a.link1:link {
+    color: black;
+    font-family: cursive;
+    padding: 10px 20px;
+    border: 2px solid #e8491d;
+    font-size: 20px;
+    text-decoration:none;
+}
+a.link1:visited {
+  color:brown;
+  background-color: transparent;
+  text-decoration: none;
+}
+a.link1:hover {
+  color:  #e8491d;
+  background-color: transparent;
+}
+a.link1:active {
+  color:chocolate;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.link2 {
+    margin-top: 20px;
+    font-size: 20px;
+    border: 2px solid #e8491d;
+    background: none;
+    padding: 10px 20px;
+    font-family: cursive;
+    cursor: pointer;
+}
+
+.link2:hover {
+  color: #e8491d;
+  background-color: transparent;
+}
+
+
+footer{
+    height: 60px;
+    margin-top: 20px;
+    padding: 20px;
+    position:relative;
+    margin-bottom: 0px;
+    width: 98%;
+    bottom: 0px;
+    color: #ffffff;
+    background-color: #e8491d;
+    text-align: center;
+    border: 0px;
+    font-size: 17px;
+}
+
+/*Media Queries*/
+
+@media(max-width: 768px){
+    header #branding,
+    header nav,
+    header nav li,
+    #newsletter h1,
+    #newsletter form,
+    #boxes .box,
+    article#main-col,
+    aside#sidebar{
+        float: none;
+        text-align: center;
+        width: 100%; 
+    }
+    
+    #showcase h1{
+    margin-top: 200px;
+    font-size: 50px;
+    margin-bottom: 130px;
+}
+
+#showcase p{
+    font-size: 23px;
+}
+    
+    header{
+        padding-bottom: 20px;
+    }
+    
+    #showcase h1{
+        margin-top: 40px;
+    }
+    
+    #university{
+        width: 300px;
+        height: 150px;
+        margin-top: 30px;
+        margin-left: 1px;
+    }
+    
+    #newsletter button, .message button{
+        display:block;
+    }
+    
+    #newsletter form input[type="email"], .message input, .message textarea{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+}
+

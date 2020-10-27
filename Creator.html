@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<html lang="eng">
+    <head>
+        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        
+        <meta name="description" content="A site to create latex templates">
+        <meta name="keywords" content=" latex, editor, duth, latex templates, templates">
+        <meta name="author" content="Michalis Meliopoulos">
+        <meta name="copyright" content="Michalis Meliopoulos">
+        <meta name="language" content="EN">
+       
+	   
+        
+        <title>Latex Template Creator | Template-Creator</title>
+        
+        <link rel="stylesheet" type="text/css" href="CSS/Style.css">
+
+    
+     </head>
+
+    <body>
+        <header>
+            <div class="container">
+                <div id="branding">
+                    <h1> <span class="highlight"> Latex </span> Templates Creator</h1>
+                </div>
+                <nav id="horizontal">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li class="current"><a href="Creator.html">Template-Creator</a></li>
+                        <li><a href="About.html">About</a></li>    
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        
+         <script src="javascript/dropdowns.js"></script>
+         <script src="save_tex.php.php"></script>
+        
+        
+        
+        
+        
+                <form name="convert_form" action="http://localhost/save_tex.php" method="POST">
+
+					<div class="row">
+					  <div class="column">
+					  
+                          <div class="dlists">
+                        <div class="select">
+                            <select name="Doctype" onchange="select_document_type(this.value)">
+                                <option "0">Select Document Type</option>
+                                <option "Article">Article</option>
+                                <option "Proc">Proc</option>
+                                <option "Minimal">Minimal </option>
+                                <option "Report">Report </option>
+                                <option "Book">Book </option>
+                                <option "Slides">Slides </option>
+                                <option "Beamer">Beamer </option>
+                                <option "Letter">Letter </option>
+
+                            </select>
+                           
+						</div>
+                    </div>
+                          
+                     <div class="dlists">
+                        <div class="select">
+                            <select name="Packages" onchange="select_package(this.value)">
+                                <option "0">Select Package&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "amsmath">amsmath</option>
+                                <option "amssymb">amssymb</option>
+                                <option "array">array </option>
+                                <option "babel">babel </option>
+                                <option "biblatex">biblatex </option>
+                                <option "caption">caption </option>
+                                <option "fancyhdr">fancyhdr</option>
+                                <option "float">float</option>
+                                <option "geometry">geometry </option>
+                                <option "graphicx">graphicx </option>
+                                <option "hyperref">hyperref </option>
+                                <option "microtype">microtype </option>
+                                <option "subfiles">subfiles</option>
+                                <option "subcaption">subcaption</option>
+                                <option "url">url </option>
+                                <option "utf8">utf8 </option>
+                                <option "verbatim">verbatim </option>
+                                <option "xcolor">xcolor </option>
+
+                            </select>
+                           
+						</div>
+                    </div>
+                          
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="Language" onchange="select_language(this.value)">
+                                <option "0">Select Language&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "French">French</option>
+                                <option "German">German</option>
+                                <option "Greek">Greek </option>
+                                <option "Italian">Italian </option>
+                                <option "Russian">Russian </option>
+                                <option "Spanish">Spanish </option>
+
+                            </select>
+                           
+						</div>
+                    </div>
+                          
+                    
+					   
+                    
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="FontFamily" onchange="select_font_family(this.value)">
+                                <option "0">Select Font Family&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Roman">Roman</option>
+                                <option "Sans serif">Sans serif</option>
+                                <option "Typewriter">Typewriter </option>
+
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="FontSize" onchange="select_font_size(this.value)">
+                                <option "0">Select Font Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "tiny">tiny</option>
+                                <option "scriptsize">scriptsize</option>
+                                <option "footnotesize">footnotesize </option>
+                                <option "small">small </option>
+                                <option "normalsize">normalsize </option>
+                                <option "large">large </option>
+                                <option "Large">Large </option>
+                                <option "LARGE">LARGE </option>
+                                <option "huge">huge </option>
+                                <option "Huge">Huge </option>
+
+                            </select>
+						</div>
+                    </div>   
+					  
+                </div>
+					  <div class="column">
+                          
+                          <div class="dlists">
+                        <div class="select">
+                            <select name="FontStyle" onchange="select_font_style(this.value)">
+                                <option "0">Select Font Style</option>
+                                <option "Medium">Medium</option>
+                                <option "Bold">Bold</option>
+                                <option "Upright">Upright </option>
+                                <option "Italic">Italic </option>
+                                <option "Slanted">Slanted </option>
+                                <option "Small Caps">Small Caps </option>
+
+                            </select>
+                           
+						</div>
+                    </div>
+                          
+                           <div class="dlists">
+                        <div class="select">
+                            <select name="Title" onchange="select_title(this.value)">
+                                <option "0">Insert Title&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Basic_Title">Basic Title</option>
+
+                            </select>
+						</div>
+                    </div>
+                          
+                          <div class="dlists">
+                        <div class="select">
+                            <select name="FontColor" onchange="select_font_color(this.value)">
+                                <option "0">Select Color&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Red">Red</option>
+                                <option "Green">Green</option>
+                                <option "Blue">Blue</option>
+                                <option "Yellow">Yellow</option>
+                                <option "Cyan">Cyan</option>
+                                <option "Magenta">Magenta</option>
+                                <option "Teal">Teal</option>
+                                <option "Purple">Purple</option>
+                                <option "DarkBlue">DarkBlue</option>
+                                <option "DarkRed">DarkRed</option>
+                                <option "Orange">Orange</option>
+                                <option "DarkOrange">DarkOrange</option>
+                                <option "Golden">Golden</option>
+                                <option "Pink">Pink</option>
+                                <option "DarkGreen">DarkGreen</option>
+                                <option "Orchid">Orchid</option>
+                                <option "Emerald">Emerald</option>
+
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="part" onchange="select_part(this.value)">
+                                <option "0">Sectioning &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Part">Part</option>
+                                <option "Chapter">Chapter</option>
+                                <option "Section">Section</option>
+                                <option "Subsection">Subsection</option>
+                                <option "Subsubsection">Subsubsection</option>
+                                <option "Paragraph">Paragraph</option>
+                                <option "Subparagraph">Subparagraph</option>
+                            </select>
+						</div>
+                    </div>
+                          
+                     <div class="dlists">
+                        <div class="select">
+                            <select name="Spacing" onchange="select_space(this.value)">
+                                <option "0">Select Spaces&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Thin">Thin</option>
+                                <option "Medium">Medium</option>
+                                <option "Thick">Thick</option>
+                                <option "Negative">Negative</option>
+                            </select>
+						</div>
+                    </div>
+                    
+                    
+                    
+                        </div>
+					  <div class="column">
+                          
+                     <div class="dlists">
+                        <div class="select">
+                            <select name="ArrayType" onchange="select_array_type(this.value)">
+                                <option "0">Select Array Type</option>
+                                <option "1x1">1x1</option>
+                                <option "1x2">1x2</option>
+                                <option "1x3">1x3</option>
+                                <option "1x4">1x4</option>
+                                <option "1x5">1x5</option>
+                                <option "2x1">2x1</option>
+                                <option "2x2">2x2</option>
+                                <option "2x3">2x3</option>
+                                <option "2x4">2x4</option>
+                                <option "2x5">2x5</option>
+                                <option "3x1">3x1</option>
+                                <option "3x2">3x2</option>
+                                <option "3x3">3x3</option>
+                                <option "3x4">3x4</option>
+                                <option "3x5">3x5</option>
+                                <option "4x1">4x1</option>
+                                <option "4x2">4x2</option>
+                                <option "4x3">4x3</option>
+                                <option "4x4">4x4</option>
+                                <option "4x5">4x5</option>
+                                <option "5x1">5x1</option>
+                                <option "5x2">5x2</option>
+                                <option "5x3">5x3</option>
+                                <option "5x4">5x4</option>
+                                <option "5x5">5x5</option>
+                            </select>
+						</div>
+                    </div>
+                          
+                          
+                         <div class="dlists">
+                        <div class="select">
+                            <select name="list" onchange="select_list(this.value)">
+                                <option "0">Create a List&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Ordered_List">Ordered List</option>
+                                <option "Unordered_List">Unordered List</option>
+                            </select>
+						</div>
+                    </div>
+                    
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="Figure" onchange="select_figure(this.value)">
+                                <option "0">Insert Figures&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Insert_Figure">Insert Figure</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="dlists">
+                        <div class="select">
+                            <select name="Picture" onchange="select_picture(this.value)">
+                                <option "0">Insert Pictures&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Insert_Pictures">Insert Picture</option>
+                            </select>
+						</div>
+                    </div>
+                          
+                     <div class="dlists">
+                        <div class="select">
+                            <select name="Extras" onchange="select_extras(this.value)">
+                                <option "0">Insert Extras &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</option>
+                                <option "Table of Contents">Table of Contents</option>
+                                <option "Table of Figures">Table of Figures</option>
+                                <option "Page Numbering">Page Numbering</option>
+                                <option "List of Files">List of Files</option>
+                            </select>
+						</div>
+                    </div>
+                    
+                    
+                 </div>
+				</div> 
+
+                   
+                    
+                   
+        
+                
+                        <textarea id="convert" name="convert" placeholder="Write here your text" rows="24" cols="100" > </textarea>
+
+                         <input id="reset" type="reset" value="reset" />
+                   
+		
+        <aside id="final_sidebar">
+            
+			<a href="TEX_rdy_template/templatetex.zip" class="link1">Get A Sample Template</a><br><br>
+            <input type="submit" value="Download your custom Template" class="link2">
+        </aside>
+        
+
+        <footer>
+            <p> Latex Template Creator, Copyright &copy; 2019</p>
+        </footer>
+                   
+    </body>
+</html>
